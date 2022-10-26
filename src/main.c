@@ -18,11 +18,16 @@ int	game_close(t_cube *game)
 	return (0);
 }
 
-void	game_init(t_cube *game)
+void	run_cube(t_cube game)
 {
-	game->scrn.width = 1024;
-	game->scrn.height = 700;
-	
+	game_init(game);
+	game->mlx = mlx_init();
+	if (!game->mlx)
+		perror();
+	game->win = mlx_new_window();
+	if (!game->win)
+		perror();
+}
 
 int	main(int argc, char *argv[])
 {
@@ -35,7 +40,7 @@ int	main(int argc, char *argv[])
 	}
 	game->mlx = mlx_init();
 	map_init(&game, argv);
-	game_init(&game);
+	run_cube(&game);
 	game->win = mlx_new_window(game->mlx, game->scrn.height, game->scrn.width, "Cub3D");
 	game->img.ptr = mlx_new_image(game->mlx, game->scrn.width, game->scrn.height);
 	//game->img.addr = mlx_get_data_addr();

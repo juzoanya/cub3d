@@ -22,6 +22,7 @@
 # endif
 
 # include <unistd.h>
+# include <errno.h>
 # include "../gnl/get_next_line.h"
 # include "../libft/libft.h"
 
