@@ -68,7 +68,7 @@ typedef struct s_player
 	t_pos	pos;
 }				t_player;
 
-typedef struct s_game
+typedef struct s_cube
 {
 	void		*mlx;
 	void		*win;
@@ -79,6 +79,6 @@ typedef struct s_game
 	t_plane		plane;
 	t_img		img;
 	int			end;
-}				t_game;
+}				t_cube;
 
 #endif

@@ -39,7 +39,7 @@ int	get_line_count(char *argv[])
 	return (i);
 }
 
-void	row_len(t_game *game, char **argv)
+void	row_len(t_cube *game, char **argv)
 {
 	int		i;
 	int		j;
@@ -69,7 +69,7 @@ void	row_len(t_game *game, char **argv)
 }
 
 
-static void	check_char_err(t_game *game, int p, int e)
+static void	check_char_err(t_cube *game, int p, int e)
 {
 	if (p < 1 || e < 1 || game->gems < 1)
 	{
@@ -79,7 +79,7 @@ static void	check_char_err(t_game *game, int p, int e)
 	}
 }
 
-void	check_map_char(t_game *game)
+void	check_map_char(t_cube *game)
 {
 	int	x;
 	int	y;

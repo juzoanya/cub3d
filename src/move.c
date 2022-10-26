@@ -12,14 +12,14 @@
 
 #include "cub3d.h"
 
-static void	print_moves_cli(t_game *game)
+static void	print_moves_cli(t_cube *game)
 {
 	ft_putstr_fd("moves = ", 1);
 	ft_putnbr_fd(game->moves, 1);
 	write(1, "\n", 1);
 }
 
-static void	last_tile_move(t_game *game, t_pos *pos, int x, int y)
+static void	last_tile_move(t_cube *game, t_pos *pos, int x, int y)
 {
 	if (game->exit_state == 1 && game->map.map[pos->x][pos->y] == 'E')
 	{
@@ -29,13 +29,13 @@ static void	last_tile_move(t_game *game, t_pos *pos, int x, int y)
 	}
 }
 
-static void	game_end_state(t_game *game)
+static void	game_end_state(t_cube *game)
 {
 	if (!player_active(game))
 		game->end = 1;
 }
 
-void	move_player(t_game *game, t_pos *pos)
+void	move_player(t_cube *game, t_pos *pos)
 {
 	int	x;
 	int	y;
@@ -64,7 +64,7 @@ void	move_player(t_game *game, t_pos *pos)
 	game_end_state(game);
 }
 
-int	player_active(t_game *game)
+int	player_active(t_cube *game)
 {
 	int	x;
 	int	y;

@@ -12,12 +12,12 @@
 
 #include "cub3d.h"
 
-void	put_image(t_game *game, void *img, int x, int y)
+void	put_image(t_cube *game, void *img, int x, int y)
 {
 	mlx_put_image_to_window(game->mlx, game->win, img, y * 32, x * 32);
 }
 
-int	game_play(t_game *game)
+int	game_play(t_cube *game)
 {
 	render_window(game);
 	return (0);

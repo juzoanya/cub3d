@@ -12,7 +12,7 @@
 
 #include "cub3d.h"
 
-void	select_side(t_game *game, t_pos *pos, int n)
+void	select_side(t_cube *game, t_pos *pos, int n)
 {
 	if (n == 0)
 	{
@@ -36,7 +36,7 @@ void	select_side(t_game *game, t_pos *pos, int n)
 	}
 }
 
-int	play_input(int keycode, t_game *game)
+int	play_input(int keycode, t_cube *game)
 {
 	t_pos	pos;
 

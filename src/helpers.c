@@ -31,7 +31,7 @@ int	check_ext(char *str, char *ext)
 	return (1);
 }
 
-void	print_moves(t_game *game)
+void	print_moves(t_cube *game)
 {
 	char	*str;
 	char	*moves;

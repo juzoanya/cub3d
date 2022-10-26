@@ -12,13 +12,13 @@
 
 #include "cub3d.h"
 
-int	game_close(t_game *game)
+int	game_close(t_cube *game)
 {
 	close_game(game);
 	return (0);
 }
 
-void	game_init(t_game *game)
+void	game_init(t_cube *game)
 {
 	game->scrn.width = 1024;
 	game->scrn.height = 700;
@@ -26,7 +26,7 @@ void	game_init(t_game *game)
 
 int	main(int argc, char *argv[])
 {
-	t_game	game;
+	t_cube	game;
 
 	if (argc < 2)
 	{

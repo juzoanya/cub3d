@@ -12,7 +12,7 @@
 
 #include "cub3d.h"
 
-static void	push_to_array(t_game *game, int fd)
+static void	push_to_array(t_cube *game, int fd)
 {
 	int		i;
 	int		x;
@@ -36,7 +36,7 @@ static void	push_to_array(t_game *game, int fd)
 	}
 }
 
-void	set_player_pos(t_game *game)
+void	set_player_pos(t_cube *game)
 {
 	int	x;
 	int	y;
@@ -59,7 +59,7 @@ void	set_player_pos(t_game *game)
 	}
 }
 
-void	map_init(t_game *game, char **argv)
+void	map_init(t_cube *game, char **argv)
 {
 	int		fd;
 	int		i;

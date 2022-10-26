@@ -12,7 +12,7 @@
 
 #include "cub3d.h"
 
-void	destroy_player_image(t_game *game)
+void	destroy_player_image(t_cube *game)
 {
 	if (game->player[0].img)
 		mlx_destroy_image(game->mlx, game->player[0].img);
@@ -26,7 +26,7 @@ void	destroy_player_image(t_game *game)
 		mlx_destroy_image(game->mlx, game->player[4].img);
 }
 
-void	destroy_snag_image(t_game *game)
+void	destroy_snag_image(t_cube *game)
 {
 	if (game->snag[0].img)
 		mlx_destroy_image(game->mlx, game->snag[0].img);
@@ -40,7 +40,7 @@ void	destroy_snag_image(t_game *game)
 		mlx_destroy_image(game->mlx, game->snag[4].img);
 }
 
-void	destroy_image(t_game *game)
+void	destroy_image(t_cube *game)
 {
 	destroy_player_image(game);
 	destroy_snag_image(game);
@@ -56,7 +56,7 @@ void	destroy_image(t_game *game)
 		mlx_destroy_image(game->mlx, game->exit[1].img);
 }
 
-void	destroy_map(t_game *game)
+void	destroy_map(t_cube *game)
 {
 	int	i;
 
